@@ -1,7 +1,7 @@
 FROM 			docker.io/centos
 MAINTAINER 		demo "demo@example.com"
 USER 			root
-EXPOSE 			80
+EXPOSE 			3000
 COPY 			app.js package.json /
 RUN			yum update -y \
 			&& yum install nodejs npm -y \
