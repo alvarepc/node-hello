@@ -7,7 +7,7 @@ app.use('/', route);
 // Start defining routes for our app/microservice
 // A route that dumps hostname information from pod
 
-route.get(3000, () => {
+route.listen(3000, () => {
         console.log('Listening on port 3000!\n')
 });
 
