@@ -2,19 +2,15 @@ const express = require('express')
 const app = express();
 
 var route = express.Router();
-
-app.get('/', (req, res) => {
-  res.send('Hello World!\n')
-});
-
-app.listen(3000, () => {
-  console.log('Listening on port 3000!\n')
-});
-
 app.use('/', route);
 
 // Start defining routes for our app/microservice
 // A route that dumps hostname information from pod
+
+route.get(3000, () => {
+        console.log('Listening on port 3000!\n')
+});
+
 route.get('/', function(req, res) {
         res.send('Hi! I am running on host ->' + hostname + '\n');
 });
